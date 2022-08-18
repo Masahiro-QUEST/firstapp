@@ -34,3 +34,4 @@ Webアプリ用セットアップ
 
 # AndoroidStudio参考サイト
 - [ショートカット集](https://developer.android.com/studio/intro/keyboard-shortcuts?hl=ja)
+- [pub.dev](https://developer.android.com/studio/intro/keyboard-shortcuts?hl=ja](https://developer.android.com/studio/intro/keyboard-shortcuts?hl=ja))
