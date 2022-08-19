@@ -41,7 +41,7 @@ class BookListPage extends StatelessWidget {
                                 ));
                             if(title != null){
                               final snackBar = SnackBar(
-                                content: Text('本を編集しました'),
+                                content: Text('$titleを編集しました'),
                               );
                               ScaffoldMessenger.of(context).showSnackBar(snackBar);
                             }
@@ -53,8 +53,8 @@ class BookListPage extends StatelessWidget {
                           label: '編集',
                         ),
                         SlidableAction(
-                          onPressed: (value) {
-                            print('削除');
+                          onPressed: (value) async{
+                            await showConfirmDialog(context, book, model);
                           },
                           backgroundColor: Colors.red,
                           foregroundColor: Colors.white,
@@ -100,4 +100,42 @@ class BookListPage extends StatelessWidget {
       ),
     );
   }
+
+  Future showConfirmDialog(
+      BuildContext context,
+      Book book,
+      BookListModel model,
+      ){
+    return showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (_) {
+        return AlertDialog(
+          title: Text("削除の確認"),
+          content: Text("${book.title}を削除しますか？"),
+          actions: [
+            TextButton(
+              child: Text("いいえ"),
+              onPressed: () => Navigator.pop(context),
+            ),
+            TextButton(
+              child: Text("はい"),
+              onPressed: () async {
+                // modelで削除
+                await model.delete(book);
+                Navigator.pop(context);
+                final snackBar = SnackBar(
+                  backgroundColor: Colors.red,
+                  content: Text('${book.title}を削除しました'),
+                );
+                model.fetchBookList();
+                ScaffoldMessenger.of(context).showSnackBar(snackBar);
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
 }
