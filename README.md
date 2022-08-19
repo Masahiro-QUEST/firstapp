@@ -58,6 +58,24 @@ Webアプリ用セットアップ
 2.ドキュメントの追加
 <img width="1360" alt="image" src="https://user-images.githubusercontent.com/94669015/185343285-db99ae47-b605-4107-b0ac-11727e656bf6.png">
 
+# エラー関係
+DartにはExceptionとErrorクラスがある
+
+馴染みのOSError等準備されたものがある（Implementers）
+ExceptionとErrorの大まかな違い
+
+- [Exception]
+プログラムの問題ではなく、実行中に異常が起こった場合のため、コード修正が不要
+- [Error]
+プログラムの問題であり、コード修正が必要
+
+*Firebaseの値取得の際にエラーやNullが入っていると『Exception』のエラーがでる
+
+<img width="1031" alt="image" src="https://user-images.githubusercontent.com/94669015/185551156-360aec77-cd6b-4c35-b04e-1561ff38df2c.png">
+
+# knowledge
+Shift + F6　･･･　変数名一括変換
+
 # AndoroidStudio参考サイト
 - [ショートカット集](https://developer.android.com/studio/intro/keyboard-shortcuts?hl=ja)
 - [pub.dev](https://developer.android.com/studio/intro/keyboard-shortcuts?hl=ja](https://developer.android.com/studio/intro/keyboard-shortcuts?hl=ja))
