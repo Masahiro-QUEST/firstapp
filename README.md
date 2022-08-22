@@ -50,8 +50,6 @@ Firebaseはアプリ開発に活用できる豊富な機能があります。
 
 ## First Step -Firebase store編-
 pubspec.yamlのdepenciesに追加したいpubを追記して、　PUb getを押下
-<img width="1055" a<img width="1512" alt="Firestoreのルール設定" src="https://user-images.githubusercontent.com/94669015/185844963-42541de1-206c-43e8-90a6-dd82b9f42650.png">
-lt="image" src="https://user-images.githubusercontent.com/94669015/185342480-2260f133-2944-4f76-a046-e71ef48473bd.png">
 
 ## Second Step  -Firebase store編-
 Webアプリ用セットアップ
