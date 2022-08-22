@@ -48,15 +48,29 @@ Firebaseはアプリ開発に活用できる豊富な機能があります。
 - [firebase_core: ^1.20.1]
 - [cloud_firestore: ^3.4.4]
 
-## First Step
+## First Step -Firebase store編-
 pubspec.yamlのdepenciesに追加したいpubを追記して、　PUb getを押下
-<img width="1055" alt="image" src="https://user-images.githubusercontent.com/94669015/185342480-2260f133-2944-4f76-a046-e71ef48473bd.png">
+<img width="1055" a<img width="1512" alt="Firestoreのルール設定" src="https://user-images.githubusercontent.com/94669015/185844963-42541de1-206c-43e8-90a6-dd82b9f42650.png">
+lt="image" src="https://user-images.githubusercontent.com/94669015/185342480-2260f133-2944-4f76-a046-e71ef48473bd.png">
 
-## Second Step
+## Second Step  -Firebase store編-
 Webアプリ用セットアップ
 1.Cloud Firestoreで「コレクションの開始を押下」
 2.ドキュメントの追加
 <img width="1360" alt="image" src="https://user-images.githubusercontent.com/94669015/185343285-db99ae47-b605-4107-b0ac-11727e656bf6.png">
+
+## Third Step  -Firebase store編-
+ルール設定。
+<img width="1512" alt="Firestoreのルール設定" src="https://user-images.githubusercontent.com/94669015/185844978-23189fd7-3b20-45a8-b8a8-556c7c19bd19.png">
+
+上記画像のところで、必要なセキュリティ設定が行える。
+例えば、ログインしたユーザじゃないと閲覧できないコンテンツの設定をしたりが可能。
+
+## First Step -Firebase storage編-
+Storageは一般的なファイルストレージ機能を提供します。
+ユーザからのファイルのアップロードや、全ユーザに提供する共有ファイルを配置するなどに使うことができます。認証済みユーザだけにアクセスを制限可能。
+
+
 
 # エラー関係
 DartにはExceptionとErrorクラスがある
@@ -79,3 +93,4 @@ Shift + F6　･･･　変数名一括変換
 # AndoroidStudio参考サイト
 - [ショートカット集](https://developer.android.com/studio/intro/keyboard-shortcuts?hl=ja)
 - [pub.dev](https://developer.android.com/studio/intro/keyboard-shortcuts?hl=ja](https://developer.android.com/studio/intro/keyboard-shortcuts?hl=ja))
+- [Flutter大学](https://www.youtube.com/watch?v=VZZx7YONWhc))
