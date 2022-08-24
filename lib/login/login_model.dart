@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import '../domain/book.dart';
 
@@ -6,6 +7,18 @@ class LoginModel extends ChangeNotifier {
 
   final titleController = TextEditingController();
   final authorController = TextEditingController();
+
+  bool isLoading = false;
+
+  void startLoading() {
+    isLoading = true;
+    notifyListeners();
+  }
+
+  void endLoading() {
+    isLoading = false;
+    notifyListeners();
+  }
 
   String? email;
   String? password;
@@ -20,14 +33,12 @@ class LoginModel extends ChangeNotifier {
     notifyListeners();
   }
 
-  Future sighUp() async {
+  Future login() async {
     this.email = titleController.text;
     this.password = authorController.text;
 
-    // firestoreに追加
-    // await FirebaseFirestore.instance.collection('books').doc(book.id).update({
-    //   'title': title,
-    //   'author': author,
-    // });
+    if ( email != null && password != null){
+      await FirebaseAuth.instance.signInWithEmailAndPassword(email: email!, password: password!);
+    }
   }
 }
