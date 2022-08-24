@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import '../domain/book.dart';
 
-class LoginModel extends ChangeNotifier {
+class RegisterModel extends ChangeNotifier {
 
   final titleController = TextEditingController();
   final authorController = TextEditingController();

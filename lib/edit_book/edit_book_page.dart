@@ -7,6 +7,7 @@ class EditBookPage extends StatelessWidget {
   final Book book;
   EditBookPage(this.book);
 
+
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<EditBookModel>(
@@ -21,6 +22,11 @@ class EditBookPage extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Column(
                 children: [
+                  Container(
+                    width: 100,
+                    height: 150,
+                    color: Colors.grey,
+                  ),
                   TextField(
                     controller: model.titleController,
                     decoration: const InputDecoration(
@@ -43,7 +49,7 @@ class EditBookPage extends StatelessWidget {
                     },
                   ),
                   const SizedBox(
-                    height: 16,
+                    height: 50,
                   ),
                   ElevatedButton(
                       onPressed: model.isUpdated()
