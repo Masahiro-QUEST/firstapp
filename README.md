@@ -71,6 +71,15 @@ Storageは一般的なファイルストレージ機能を提供します。
 <img width="1376" alt="image" src="https://user-images.githubusercontent.com/94669015/185863987-ff6525ca-9bf3-4e29-937c-a3004cb7f0f6.png">
 デフォルトのルールは認証した人しかアクセスできないようになっている。
 
+## First Step -Firebase Authentication編-
+Authiの「User」箇所に登録すると情報が表示される。
+<img width="1501" alt="image" src="https://user-images.githubusercontent.com/94669015/186336203-2f35852b-0f4b-453d-924e-8151c35b6c1c.png">
+
+「Sign-in method」のところでログイン　プロバイダの情報で押下し、有効にする必要がある。
+<img width="1486" alt="image" src="https://user-images.githubusercontent.com/94669015/186337163-e37ea191-c5d7-4f78-8b5e-4e1b75c26fa3.png">
+
+
+
 
 
 # エラー関係
