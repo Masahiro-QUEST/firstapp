@@ -79,9 +79,6 @@ Authiの「User」箇所に登録すると情報が表示される。
 <img width="1486" alt="image" src="https://user-images.githubusercontent.com/94669015/186337163-e37ea191-c5d7-4f78-8b5e-4e1b75c26fa3.png">
 
 
-
-
-
 # エラー関係
 DartにはExceptionとErrorクラスがある
 
@@ -96,6 +93,16 @@ ExceptionとErrorの大まかな違い
 *Firebaseの値取得の際にエラーやNullが入っていると『Exception』のエラーがでる
 
 <img width="1031" alt="image" src="https://user-images.githubusercontent.com/94669015/185551156-360aec77-cd6b-4c35-b04e-1561ff38df2c.png">
+## flutterのPackageのhttpのバージョン0.13.4を導入したところ下記のエラーが出てしまいました。
+<img width="1077" alt="image" src="https://user-images.githubusercontent.com/94669015/186567718-c36a23cb-d9f3-4a97-9d8b-89cfffe05b73.png">
+The argument type 'String' can't be assigned to the parameter type 'Uri'.
+
+Stringの引数をURLに割り当てられませんというエラー。
+```
+function test() {
+  console.log("この関数の前に空白行があるのがわかりますか?");
+}
+```
 
 # knowledge
 Shift + F6　･･･　変数名一括変換
