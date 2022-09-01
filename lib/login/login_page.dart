@@ -27,7 +27,7 @@ class LoginPage extends StatelessWidget {
                       TextField(
                         controller: model.titleController,
                         decoration: const InputDecoration(
-                            hintText: 'パスワード'
+                            hintText: 'ID'
                         ),
                         onChanged: (text) {
                           model.setEmail(text);
@@ -41,6 +41,7 @@ class LoginPage extends StatelessWidget {
                         decoration: const InputDecoration(
                             hintText: 'Password'
                         ),
+                        obscureText: true,
                         onChanged: (text) {
                           model.setPassword(text);
                         },
@@ -74,9 +75,8 @@ class LoginPage extends StatelessWidget {
                                     builder: (context) => RegisterPage()
                                 ));
                           },
-                          child: Text("新規登録の方はこちら"
-
-                      ))
+                          child: Text("新規登録の方はこちら")
+                      )
                     ],),
                 ),
                 if (model.isLoading)

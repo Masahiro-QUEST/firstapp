@@ -1,9 +1,20 @@
 import 'package:firstapp/registar/register_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../domain/book.dart';
 
 class RegisterPage extends StatelessWidget {
+
+  Future _launchUrl() async {
+    final Uri _url = Uri.parse('https://dev.d2wury9cbvd286.amplifyapp.com');
+
+    if (await canLaunchUrl(_url)) {
+      await launchUrl(_url);
+    } else {
+      throw 'Unable to launch url $_url';
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -19,10 +30,23 @@ class RegisterPage extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Column(
                 children: [
+                  Text("JリーグID新規登録", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),),
+                  Text("ご入力いただいたメールアドレスに、確認メールを送付致します。"
+                      "\n1.　お客様ご自身でメール設定されていない場合も、メールサーバ上で自動的に迷惑メールへ振り分けられてしまうことがございます"
+                      "\n2.　URL付きメールが受信拒否になっている場合や、ドメイン指定などでの受信設定の影響で届かない場合もございます。",
+                    style: TextStyle(fontSize: 15)),
+                  Container(
+                    width: double.infinity,
+                    child:TextButton(onPressed: (){
+                      _launchUrl();
+                    }, child: Text(">他サイトのアカウントで登録する"), style: TextButton.styleFrom(
+                      alignment: Alignment.topLeft,
+                    ),),
+                  ),
                   TextField(
                     controller: model.titleController,
                     decoration: const InputDecoration(
-                        hintText: 'Email'
+                        hintText: 'メールアドレス'
                     ),
                     onChanged: (text) {
                       model.setEmail(text);
@@ -34,8 +58,9 @@ class RegisterPage extends StatelessWidget {
                   TextField(
                     controller: model.authorController,
                     decoration: const InputDecoration(
-                        hintText: 'Password'
+                        hintText: 'パスワード'
                     ),
+                    obscureText: true,
                     onChanged: (text) {
                       model.setPassword(text);
                     },

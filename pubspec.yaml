@@ -19,7 +19,10 @@ dependencies:
   image_picker: ^0.8.5+3
   firebase_storage: ^10.3.6
   firebase_auth: ^3.6.4
-
+  url_launcher: ^6.1.5
+  http: ^0.13.5
+  firebase_dynamic_links: ^4.3.6
+  page_indicator: ^0.4.1
 
 dev_dependencies:
   flutter_test:
@@ -32,4 +35,12 @@ flutter:
   - images/questLogo.png
   - assets/manIcon.jpg
   - assets/womanIcon.jpg
+  - assets/bubbleBird.png
+  - assets/bubbleMap.png
+  - assets/bubbleEarth.png
+  - assets/Banner.png
+  - assets/icon.png
+  - assets/icon02.png
+  - assets/icon03.png
+  - assets/icon04.png
 

@@ -56,7 +56,7 @@ class _Footer extends State
       body: Center(
         child: Text('本一覧'),
       ),
-        bottomNavigationBar: BottomNavigationBar(
+      bottomNavigationBar: BottomNavigationBar(
       items: const[
         BottomNavigationBarItem(icon: Icon(Icons.home), label: 'ホーム',),
         BottomNavigationBarItem(icon: Icon(Icons.textsms), label: 'トーク',),
