@@ -16,8 +16,8 @@ class MyPage extends StatelessWidget {
             return Stack(
               children: [
                 Column(children: [
-                  Text("名前"),
-                  Text("自己紹介"),
+                  Text(model.name ?? "名前"),
+                  Text(model.description ?? "自己紹介"),
                   Text(model.email ?? "メールアドレスなし"),
                   TextButton(
                       onPressed: () async {
