@@ -106,6 +106,7 @@ function test() {
 
 # knowledge
 Shift + F6　･･･　変数名一括変換
+Caps Lock　 + command + L  ･･･ コード整形
 
 # AndoroidStudio参考サイト
 - [ショートカット集](https://developer.android.com/studio/intro/keyboard-shortcuts?hl=ja)
