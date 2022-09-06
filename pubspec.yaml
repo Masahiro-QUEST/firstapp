@@ -23,6 +23,7 @@ dependencies:
   http: ^0.13.5
   firebase_dynamic_links: ^4.3.6
   page_indicator: ^0.4.1
+  firebase_messaging: ^11.2.8
 
 dev_dependencies:
   flutter_test:
@@ -44,4 +45,5 @@ flutter:
   - assets/icon03.png
   - assets/icon04.png
   - assets/profile.png
+  - assets/ball.png
 

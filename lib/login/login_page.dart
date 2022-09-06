@@ -1,11 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firstapp/registar/register_model.dart';
 import 'package:firstapp/registar/register_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../domain/book.dart';
 import '../mypage/first_mypage.dart';
-import '../mypage/my_page.dart';
+
 import 'login_model.dart';
 
 

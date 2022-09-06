@@ -4,7 +4,6 @@ import '../domain/book.dart';
 import 'edit_profile_model.dart';
 
 class EditProfilePage extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<EditProfileModel>(
@@ -14,21 +13,20 @@ class EditProfilePage extends StatelessWidget {
           title: const Text('プロフィール編集'),
         ),
         body: Center(
-          child: Consumer<EditProfileModel>(builder: (context, model, child){
+          child: Consumer<EditProfileModel>(builder: (context, model, child) {
             return Padding(
               padding: const EdgeInsets.all(8.0),
               child: Column(
                 children: [
-                  Container(
-                    width: 100,
-                    height: 150,
-                    color: Colors.grey,
-                  ),
+                  ClipOval(
+                      child: IconButton(
+                        icon: Icon(Icons.circle,size: 42,color: Colors.grey,),
+                        onPressed: () {
+                    },
+                  )),
                   TextField(
                     controller: model.nameController,
-                    decoration: const InputDecoration(
-                        hintText: '名前'
-                    ),
+                    decoration: const InputDecoration(hintText: '名前'),
                     onChanged: (text) {
                       model.setName(text);
                     },
@@ -38,9 +36,7 @@ class EditProfilePage extends StatelessWidget {
                   ),
                   TextField(
                     controller: model.descriptionController,
-                    decoration: const InputDecoration(
-                        hintText: '自己紹介'
-                    ),
+                    decoration: const InputDecoration(hintText: '自己紹介'),
                     onChanged: (text) {
                       model.setDescription(text);
                     },
@@ -51,21 +47,23 @@ class EditProfilePage extends StatelessWidget {
                   ElevatedButton(
                       onPressed: model.isUpdated()
                           ? () async {
-                        try {
-                          print("更新開始");
-                          await model.update();
-                          Navigator.of(context).pop();
-                          print("更新完了");
-                        } catch (e) {
-                          print(e);
-                          final snackBar = SnackBar(
-                            backgroundColor: Colors.red,
-                            content: Text(e.toString()),
-                          );
-                        }
-                      } : null,
+                              try {
+                                print("更新開始");
+                                await model.update();
+                                Navigator.of(context).pop();
+                                print("更新完了");
+                              } catch (e) {
+                                print(e);
+                                final snackBar = SnackBar(
+                                  backgroundColor: Colors.red,
+                                  content: Text(e.toString()),
+                                );
+                              }
+                            }
+                          : null,
                       child: const Text('更新する')),
-                ],),
+                ],
+              ),
             );
           }),
         ),

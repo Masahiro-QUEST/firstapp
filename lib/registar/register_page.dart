@@ -2,7 +2,6 @@ import 'package:firstapp/registar/register_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
-import '../domain/book.dart';
 
 class RegisterPage extends StatelessWidget {
 

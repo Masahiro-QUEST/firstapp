@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firstapp/registar/register_footer.dart';
+import 'package:firstapp/welcome_page/first_welcome.dart';
 import 'package:flutter/material.dart';
 import 'book_list/book_list_page.dart';
 import 'header.dart'; // <- header.dart を インポート
@@ -17,7 +18,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: MyApp(),
+        body: WelcomePage(),
       )
 
     );
